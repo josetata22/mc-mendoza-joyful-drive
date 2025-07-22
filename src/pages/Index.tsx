@@ -1,12 +1,27 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Navigation } from "@/components/Navigation"
+import { Hero } from "@/components/Hero"
+import { Services } from "@/components/Services"
+import { Gallery } from "@/components/Gallery"
+import { Testimonials } from "@/components/Testimonials"
+import { Blog } from "@/components/Blog"
+import { Location } from "@/components/Location"
+import { Footer } from "@/components/Footer"
+import { FloatingContact } from "@/components/FloatingContact"
 
 const Index = () => {
+  const logo = "/lovable-uploads/d91d7a93-553e-441b-8c48-b97a2a2d052f.png"
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Navigation logo={logo} />
+      <Hero />
+      <Services />
+      <Gallery />
+      <Testimonials />
+      <Blog />
+      <Location />
+      <Footer logo={logo} />
+      <FloatingContact />
     </div>
   );
 };
