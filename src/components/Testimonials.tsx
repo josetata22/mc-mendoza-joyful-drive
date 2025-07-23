@@ -3,20 +3,20 @@ import { Star, Quote } from "lucide-react"
 
 const testimonials = [
   {
-    name: "Carlos Mendoza",
-    role: "Transportista",
-    company: "Transportes Chapala",
+    name: "Chino",
+    role: "Cliente",
+    company: "Herrero",
     rating: 5,
-    content: "Excelente servicio y productos de primera calidad. Llevo más de 10 años comprando aquí todas las refacciones para mi flota. Siempre tienen lo que necesito y el precio es muy competitivo.",
-    avatar: "CM"
+    content: "Buen servicio confiable.",
+    avatar: "C"
   },
   {
-    name: "María Elena García",
-    role: "Propietaria",
-    company: "Taller Mecánico García",
+    name: "Coche",
+    role: "Cliente",
+    company: "Fontaneria",
     rating: 5,
-    content: "La mejor refaccionaria de la zona. Su asesoría técnica es invaluable y nunca me han fallado con la entrega. Mis clientes quedan satisfechos con la calidad de las piezas que instalo.",
-    avatar: "MG"
+    content: "Buenos articulos para el trabajo.",
+    avatar: "C"
   },
   {
     name: "Roberto Silva",
@@ -29,7 +29,7 @@ const testimonials = [
   {
     name: "Ana Ruiz",
     role: "Gerente",
-    company: "Fletes del Lago",
+    company: "Taller mecanico",
     rating: 5,
     content: "Profesionalismo y confianza. Manejan las mejores marcas y su stock siempre está actualizado. Para nuestros vehículos comerciales es fundamental contar con proveedores como MC Mendoza.",
     avatar: "AR"
@@ -43,12 +43,12 @@ const testimonials = [
     avatar: "JH"
   },
   {
-    name: "Patricia López",
-    role: "Conductora",
+    name: "Sergio López",
+    role: "Cliente",
     company: "Taxi Chapala",
     rating: 5,
     content: "Servicio rápido y eficiente. Cuando necesito algo urgente para mi taxi, siempre puedo contar con ellos. Su entrega a domicilio me ha salvado muchas veces.",
-    avatar: "PL"
+    avatar: "SL"
   }
 ]
 

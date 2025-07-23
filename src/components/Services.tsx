@@ -35,12 +35,7 @@ const services = [
     description: "Filtros de aceite, aire, combustible y cabina. Protección máxima para tu motor y sistemas vehiculares.",
     features: ["Aceite", "Aire", "Combustible", "Cabina"]
   },
-  {
-    icon: Truck,
-    title: "Entrega Rápida",
-    description: "Servicio de entrega en Chapala y alrededores. Disponibilidad inmediata de refacciones de uso común.",
-    features: ["Entrega Local", "Stock Disponible", "Servicio Rápido", "Zona Chapala"]
-  },
+  
   {
     icon: Clock,
     title: "Asesoría Técnica",

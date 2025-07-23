@@ -45,12 +45,12 @@ export function Hero() {
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-slide-up">
-            <span className="block">Mangueras y Conexiones</span>
+            <span className="block">MC</span>
             <span className="block text-mc-red-light">Mendoza</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto animate-slide-up" style={{ animationDelay: "0.3s" }}>
-            Tu socio confiable en refacciones automotrices. 
+            El mejor servicio de la rivera de chapala.
             <span className="block mt-2 text-mc-red-light font-semibold">
               Calidad, confianza y excelencia en cada pieza.
             </span>
