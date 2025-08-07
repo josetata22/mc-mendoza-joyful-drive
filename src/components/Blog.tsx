@@ -3,19 +3,19 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, User, ArrowRight, X } from "lucide-react"
-import workshopScene from "@/assets/workshop-scene.jpg"
-import partsCollection from "@/assets/parts-collection.jpg"
-import heroBg from "@/assets/hero-bg.jpg"
+import taller1 from "@/assets/taller1.jpeg"
+import taller2 from "@/assets/taller2.jpeg"
+import taller3 from "@/assets/taller3.jpeg"
 
 const blogPosts = [
   {
     id: 1,
     title: "Cómo elegir el aceite correcto para tu motor",
     excerpt: "Descubre los factores clave que debes considerar al seleccionar el aceite ideal para mantener tu motor en perfectas condiciones.",
-    image: partsCollection,
+    image: taller1,
     category: "Mantenimiento",
     author: "MC Mendoza",
-    date: "2024-01-15",
+    date: "2025-01-15",
     readTime: "5 min",
     content: `
       <h2>La importancia del aceite correcto</h2>
@@ -44,10 +44,10 @@ const blogPosts = [
     id: 2,
     title: "Mantenimiento preventivo de mangueras automotrices",
     excerpt: "Aprende a identificar cuándo es momento de cambiar las mangueras de tu vehículo y evita costosas averías.",
-    image: workshopScene,
+    image: taller2 ,
     category: "Prevención",
     author: "MC Mendoza",
-    date: "2024-01-10",
+    date: "2025-01-10",
     readTime: "7 min",
     content: `
       <h2>¿Por qué es importante el mantenimiento de mangueras?</h2>
@@ -80,10 +80,10 @@ const blogPosts = [
     id: 3,
     title: "Sistemas de filtración: Tu motor te lo agradecerá",
     excerpt: "Conoce la importancia de mantener un sistema de filtración eficiente y cómo puede extender la vida de tu motor.",
-    image: heroBg,
+    image: taller3,
     category: "Filtros",
     author: "MC Mendoza",
-    date: "2024-01-05",
+    date: "2025-01-05",
     readTime: "6 min",
     content: `
       <h2>La importancia de la filtración</h2>

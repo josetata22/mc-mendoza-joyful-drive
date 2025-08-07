@@ -121,11 +121,11 @@ export function Location() {
               <CardContent className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Lunes - Viernes</span>
-                  <span className="font-semibold text-mc-red">8:00 AM - 6:00 PM</span>
+                  <span className="font-semibold text-mc-red">9:00 AM - 6:00 PM</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Sábados</span>
-                  <span className="font-semibold text-mc-red">8:00 AM - 4:00 PM</span>
+                  <span className="font-semibold text-mc-red">9:00 AM - 3:00 PM</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Domingos</span>

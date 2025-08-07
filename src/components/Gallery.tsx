@@ -1,41 +1,34 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, X } from "lucide-react"
-import workshopScene from "@/assets/workshop-scene.jpg"
-import partsCollection from "@/assets/parts-collection.jpg"
-import heroBg from "@/assets/hero-bg.jpg"
+import taller1 from "@/assets/taller1.jpeg"
+import taller2 from "@/assets/taller2.jpeg"
+import taller3 from "@/assets/taller3.jpeg"
+
+
 
 const galleryImages = [
   {
-    src: workshopScene,
+    src: taller1,
     title: "Taller Profesional",
-    description: "Instalaciones modernas con tecnología de vanguardia"
+    description: "Amplio surtido en tornilleria."
   },
-  {
-    src: partsCollection,
-    title: "Amplio Inventario",
-    description: "Miles de refacciones disponibles para toda marca"
+
+   {
+    src: taller2,
+    title: "La morocha la mascota de mc mendoza.",
+    description: "la guardia"
   },
+
   {
-    src: heroBg,
-    title: "Productos de Calidad",
-    description: "Mangueras, conexiones y aceites premium"
+    src: taller3,
+    title: "La mojarra la moto chingona",
+    description: "para reparto de las piezas"
   },
-  {
-    src: workshopScene,
-    title: "Servicio Especializado",
-    description: "Equipo técnico con más de 15 años de experiencia"
-  },
-  {
-    src: partsCollection,
-    title: "Marcas Reconocidas",
-    description: "Trabajamos con las mejores marcas del mercado"
-  },
-  {
-    src: heroBg,
-    title: "Tecnología Avanzada",
-    description: "Sistemas modernos para un servicio eficiente"
-  }
+
+
+  
+
 ]
 
 export function Gallery() {
