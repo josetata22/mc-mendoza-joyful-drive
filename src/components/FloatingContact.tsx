@@ -1,7 +1,10 @@
 import { Phone, MessageCircle, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 export function FloatingContact() {
+  const { t } = useLanguage()
+  
   return (
     <div className="fixed right-6 bottom-6 z-50 flex flex-col gap-3">
       <Button
@@ -10,7 +13,7 @@ export function FloatingContact() {
         onClick={() => window.open("https://wa.me/523221234567", "_blank")}
       >
         <MessageCircle className="h-6 w-6" />
-        <span className="sr-only">WhatsApp</span>
+        <span className="sr-only">{t('contact.whatsapp')}</span>
       </Button>
       
       <Button
@@ -20,7 +23,7 @@ export function FloatingContact() {
         onClick={() => window.open("tel:+523221234567", "_blank")}
       >
         <Phone className="h-5 w-5" />
-        <span className="sr-only">Teléfono</span>
+        <span className="sr-only">{t('contact.phone')}</span>
       </Button>
       
       <Button
@@ -30,7 +33,7 @@ export function FloatingContact() {
         onClick={() => window.open("mailto:contacto@mcmendoza.com", "_blank")}
       >
         <Mail className="h-5 w-5" />
-        <span className="sr-only">Email</span>
+        <span className="sr-only">{t('contact.email')}</span>
       </Button>
     </div>
   )

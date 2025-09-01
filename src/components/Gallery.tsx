@@ -1,38 +1,33 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, X } from "lucide-react"
+import { useLanguage } from "@/contexts/LanguageContext"
 import taller1 from "@/assets/taller1.jpeg"
 import taller2 from "@/assets/taller2.jpeg"
 import taller3 from "@/assets/taller3.jpeg"
 
 
-
-const galleryImages = [
-  {
-    src: taller1,
-    title: "Taller Profesional",
-    description: "Amplio surtido en tornilleria."
-  },
-
-   {
-    src: taller2,
-    title: "La morocha la mascota de mc mendoza.",
-    description: "la guardia"
-  },
-
-  {
-    src: taller3,
-    title: "La mojarra la moto chingona",
-    description: "para reparto de las piezas"
-  },
-
-
-  
-
-]
-
 export function Gallery() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
+  const { t } = useLanguage()
+  
+  const galleryImages = [
+    {
+      src: taller1,
+      title: t('gallery.img1.title'),
+      description: t('gallery.img1.description')
+    },
+    {
+      src: taller2,
+      title: t('gallery.img2.title'),
+      description: t('gallery.img2.description')
+    },
+    {
+      src: taller3,
+      title: t('gallery.img3.title'),
+      description: t('gallery.img3.description')
+    }
+  ]
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextImage = () => {
@@ -69,11 +64,10 @@ export function Gallery() {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Nuestra <span className="text-mc-red">Galería</span>
+            {t('gallery.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Conoce nuestras instalaciones, productos y el equipo que hace posible 
-            brindar el mejor servicio en refacciones automotrices.
+            {t('gallery.subtitle')}
           </p>
         </div>
 

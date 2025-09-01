@@ -9,6 +9,7 @@ import {
   Instagram,
   Twitter
 } from "lucide-react"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 interface FooterProps {
   logo: string
@@ -16,6 +17,7 @@ interface FooterProps {
 
 export function Footer({ logo }: FooterProps) {
   const currentYear = new Date().getFullYear()
+  const { t } = useLanguage()
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)

@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Star, Quote } from "lucide-react"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 const testimonials = [
   {
@@ -53,17 +54,18 @@ const testimonials = [
 ]
 
 export function Testimonials() {
+  const { t } = useLanguage()
+  
   return (
     <section id="testimonios" className="py-20 bg-gradient-to-br from-muted to-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Lo que dicen nuestros <span className="text-mc-red">Clientes</span>
+            {t('testimonials.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            La satisfacción de nuestros clientes es nuestra mayor recompensa. 
-            Conoce las experiencias de quienes confían en MC Mendoza.
+            {t('testimonials.subtitle')}
           </p>
         </div>
 

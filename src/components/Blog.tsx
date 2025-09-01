@@ -3,126 +3,128 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, User, ArrowRight, X } from "lucide-react"
+import { useLanguage } from "@/contexts/LanguageContext"
 import taller1 from "@/assets/taller1.jpeg"
 import taller2 from "@/assets/taller2.jpeg"
 import taller3 from "@/assets/taller3.jpeg"
 
-const blogPosts = [
-  {
-    id: 1,
-    title: "Cómo elegir el aceite correcto para tu motor",
-    excerpt: "Descubre los factores clave que debes considerar al seleccionar el aceite ideal para mantener tu motor en perfectas condiciones.",
-    image: taller1,
-    category: "Mantenimiento",
-    author: "MC Mendoza",
-    date: "2025-01-15",
-    readTime: "5 min",
-    content: `
-      <h2>La importancia del aceite correcto</h2>
-      <p>Elegir el aceite adecuado para tu motor es una de las decisiones más importantes que puedes tomar para mantener tu vehículo en óptimas condiciones. Un aceite de calidad no solo protege las partes móviles del motor, sino que también mejora su eficiencia y prolonga su vida útil.</p>
-      
-      <h3>Factores a considerar</h3>
-      <p><strong>Viscosidad:</strong> Es la resistencia del aceite al flujo. Los aceites más viscosos son mejores para motores con mayor desgaste, mientras que los menos viscosos son ideales para motores nuevos.</p>
-      
-      <p><strong>Tipo de aceite:</strong></p>
-      <ul>
-        <li><strong>Convencional:</strong> Más económico, ideal para motores con alto kilometraje</li>
-        <li><strong>Sintético:</strong> Mayor durabilidad y protección, mejor para condiciones extremas</li>
-        <li><strong>Semi-sintético:</strong> Combina lo mejor de ambos mundos</li>
-      </ul>
-      
-      <h3>Recomendaciones específicas</h3>
-      <p>Siempre consulta el manual de tu vehículo para conocer las especificaciones exactas. En MC Mendoza contamos con aceites de las mejores marcas y te asesoramos para que elijas la opción perfecta para tu motor.</p>
-      
-      <p><strong>Marcas recomendadas:</strong> Mobil 1, Castrol, Shell, Valvoline</p>
-      
-      <h3>Conclusión</h3>
-      <p>Un mantenimiento adecuado con el aceite correcto puede ahorrarte miles de pesos en reparaciones futuras. Visítanos en MC Mendoza y nuestros expertos te ayudarán a elegir el aceite perfecto para tu vehículo.</p>
-    `
-  },
-  {
-    id: 2,
-    title: "Mantenimiento preventivo de mangueras automotrices",
-    excerpt: "Aprende a identificar cuándo es momento de cambiar las mangueras de tu vehículo y evita costosas averías.",
-    image: taller2 ,
-    category: "Prevención",
-    author: "MC Mendoza",
-    date: "2025-01-10",
-    readTime: "7 min",
-    content: `
-      <h2>¿Por qué es importante el mantenimiento de mangueras?</h2>
-      <p>Las mangueras automotrices son componentes críticos que transportan fluidos vitales como refrigerante, aceite y combustible. Su falla puede causar desde sobrecalentamiento hasta daños graves en el motor.</p>
-      
-      <h3>Signos de alarma</h3>
-      <p><strong>Inspección visual:</strong></p>
-      <ul>
-        <li>Grietas o fisuras en la superficie</li>
-        <li>Hinchazón o deformaciones</li>
-        <li>Manchas de líquido debajo del vehículo</li>
-        <li>Mangueras duras o demasiado blandas</li>
-        <li>Conexiones flojas o corroídas</li>
-      </ul>
-      
-      <h3>Tipos de mangueras y su función</h3>
-      <p><strong>Refrigeración:</strong> Transportan el coolant entre el motor y el radiador</p>
-      <p><strong>Frenos:</strong> Llevan el líquido de frenos desde el cilindro maestro hasta las ruedas</p>
-      <p><strong>Dirección hidráulica:</strong> Permiten el funcionamiento del sistema de dirección asistida</p>
-      <p><strong>Combustible:</strong> Transportan gasolina desde el tanque hasta el motor</p>
-      
-      <h3>Frecuencia de cambio</h3>
-      <p>Recomendamos inspeccionar las mangueras cada 6 meses y cambiarlas cada 4-5 años o según las condiciones de uso. En climas extremos o uso intensivo, la frecuencia puede ser mayor.</p>
-      
-      <h3>Prevención es clave</h3>
-      <p>En MC Mendoza ofrecemos mangueras de alta calidad que cumplen con las especificaciones originales de fábrica. Nuestro equipo técnico puede realizar una inspección completa y recomendarte el mejor momento para el cambio.</p>
-    `
-  },
-  {
-    id: 3,
-    title: "Sistemas de filtración: Tu motor te lo agradecerá",
-    excerpt: "Conoce la importancia de mantener un sistema de filtración eficiente y cómo puede extender la vida de tu motor.",
-    image: taller3,
-    category: "Filtros",
-    author: "MC Mendoza",
-    date: "2025-01-05",
-    readTime: "6 min",
-    content: `
-      <h2>La importancia de la filtración</h2>
-      <p>Un sistema de filtración eficiente es la primera línea de defensa contra contaminantes que pueden dañar tu motor. Los filtros protegen componentes vitales y aseguran un funcionamiento óptimo.</p>
-      
-      <h3>Tipos de filtros esenciales</h3>
-      
-      <h4>Filtro de aceite</h4>
-      <p>Elimina partículas metálicas y contaminantes del aceite del motor. Debe cambiarse con cada cambio de aceite para mantener la lubricación óptima.</p>
-      
-      <h4>Filtro de aire</h4>
-      <p>Protege el motor de polvo, polen y otros contaminantes del aire. Un filtro sucio reduce la eficiencia del combustible y puede dañar el motor.</p>
-      
-      <h4>Filtro de combustible</h4>
-      <p>Retiene impurezas del combustible antes de que lleguen al motor. Es crucial para el funcionamiento de los inyectores y la bomba de combustible.</p>
-      
-      <h4>Filtro de cabina</h4>
-      <p>Mejora la calidad del aire dentro del vehículo, filtrando polen, polvo y gases nocivos del sistema de ventilación.</p>
-      
-      <h3>Señales de que necesitas cambiar los filtros</h3>
-      <ul>
-        <li>Reducción en el rendimiento del combustible</li>
-        <li>Pérdida de potencia del motor</li>
-        <li>Olores extraños en la cabina</li>
-        <li>Ruidos inusuales del motor</li>
-        <li>Aire acondicionado menos eficiente</li>
-      </ul>
-      
-      <h3>Calidad marca la diferencia</h3>
-      <p>En MC Mendoza manejamos filtros de las mejores marcas que cumplen o superan las especificaciones OEM. Invertir en filtros de calidad es invertir en la longevidad de tu vehículo.</p>
-      
-      <h3>Programa de mantenimiento</h3>
-      <p>Establece un programa regular de cambio de filtros basado en el kilometraje y condiciones de uso. Nuestros técnicos pueden ayudarte a crear un plan personalizado para tu vehículo.</p>
-    `
-  }
-]
-
 export function Blog() {
+  const { t, language } = useLanguage()
   const [selectedPost, setSelectedPost] = useState<typeof blogPosts[0] | null>(null)
+  
+  const blogPosts = [
+    {
+      id: 1,
+      title: t('blog.post1.title'),
+      excerpt: t('blog.post1.excerpt'),
+      image: taller1,
+      category: language === 'es' ? "Mantenimiento" : "Maintenance",
+      author: "MC Mendoza",
+      date: "2025-01-15",
+      readTime: language === 'es' ? "5 min" : "5 min",
+      content: `
+        <h2>La importancia del aceite correcto</h2>
+        <p>Elegir el aceite adecuado para tu motor es una de las decisiones más importantes que puedes tomar para mantener tu vehículo en óptimas condiciones. Un aceite de calidad no solo protege las partes móviles del motor, sino que también mejora su eficiencia y prolonga su vida útil.</p>
+        
+        <h3>Factores a considerar</h3>
+        <p><strong>Viscosidad:</strong> Es la resistencia del aceite al flujo. Los aceites más viscosos son mejores para motores con mayor desgaste, mientras que los menos viscosos son ideales para motores nuevos.</p>
+        
+        <p><strong>Tipo de aceite:</strong></p>
+        <ul>
+          <li><strong>Convencional:</strong> Más económico, ideal para motores con alto kilometraje</li>
+          <li><strong>Sintético:</strong> Mayor durabilidad y protección, mejor para condiciones extremas</li>
+          <li><strong>Semi-sintético:</strong> Combina lo mejor de ambos mundos</li>
+        </ul>
+        
+        <h3>Recomendaciones específicas</h3>
+        <p>Siempre consulta el manual de tu vehículo para conocer las especificaciones exactas. En MC Mendoza contamos con aceites de las mejores marcas y te asesoramos para que elijas la opción perfecta para tu motor.</p>
+        
+        <p><strong>Marcas recomendadas:</strong> Mobil 1, Castrol, Shell, Valvoline</p>
+        
+        <h3>Conclusión</h3>
+        <p>Un mantenimiento adecuado con el aceite correcto puede ahorrarte miles de pesos en reparaciones futuras. Visítanos en MC Mendoza y nuestros expertos te ayudarán a elegir el aceite perfecto para tu vehículo.</p>
+      `
+    },
+    {
+      id: 2,
+      title: t('blog.post2.title'),
+      excerpt: t('blog.post2.excerpt'),
+      image: taller2,
+      category: language === 'es' ? "Prevención" : "Prevention",
+      author: "MC Mendoza",
+      date: "2025-01-10",
+      readTime: language === 'es' ? "7 min" : "7 min",
+      content: `
+        <h2>¿Por qué es importante el mantenimiento de mangueras?</h2>
+        <p>Las mangueras automotrices son componentes críticos que transportan fluidos vitales como refrigerante, aceite y combustible. Su falla puede causar desde sobrecalentamiento hasta daños graves en el motor.</p>
+        
+        <h3>Signos de alarma</h3>
+        <p><strong>Inspección visual:</strong></p>
+        <ul>
+          <li>Grietas o fisuras en la superficie</li>
+          <li>Hinchazón o deformaciones</li>
+          <li>Manchas de líquido debajo del vehículo</li>
+          <li>Mangueras duras o demasiado blandas</li>
+          <li>Conexiones flojas o corroídas</li>
+        </ul>
+        
+        <h3>Tipos de mangueras y su función</h3>
+        <p><strong>Refrigeración:</strong> Transportan el coolant entre el motor y el radiador</p>
+        <p><strong>Frenos:</strong> Llevan el líquido de frenos desde el cilindro maestro hasta las ruedas</p>
+        <p><strong>Dirección hidráulica:</strong> Permiten el funcionamiento del sistema de dirección asistida</p>
+        <p><strong>Combustible:</strong> Transportan gasolina desde el tanque hasta el motor</p>
+        
+        <h3>Frecuencia de cambio</h3>
+        <p>Recomendamos inspeccionar las mangueras cada 6 meses y cambiarlas cada 4-5 años o según las condiciones de uso. En climas extremos o uso intensivo, la frecuencia puede ser mayor.</p>
+        
+        <h3>Prevención es clave</h3>
+        <p>En MC Mendoza ofrecemos mangueras de alta calidad que cumplen con las especificaciones originales de fábrica. Nuestro equipo técnico puede realizar una inspección completa y recomendarte el mejor momento para el cambio.</p>
+      `
+    },
+    {
+      id: 3,
+      title: t('blog.post3.title'),
+      excerpt: t('blog.post3.excerpt'),
+      image: taller3,
+      category: language === 'es' ? "Filtros" : "Filters",
+      author: "MC Mendoza",
+      date: "2025-01-05",
+      readTime: language === 'es' ? "6 min" : "6 min",
+      content: `
+        <h2>La importancia de la filtración</h2>
+        <p>Un sistema de filtración eficiente es la primera línea de defensa contra contaminantes que pueden dañar tu motor. Los filtros protegen componentes vitales y aseguran un funcionamiento óptimo.</p>
+        
+        <h3>Tipos de filtros esenciales</h3>
+        
+        <h4>Filtro de aceite</h4>
+        <p>Elimina partículas metálicas y contaminantes del aceite del motor. Debe cambiarse con cada cambio de aceite para mantener la lubricación óptima.</p>
+        
+        <h4>Filtro de aire</h4>
+        <p>Protege el motor de polvo, polen y otros contaminantes del aire. Un filtro sucio reduce la eficiencia del combustible y puede dañar el motor.</p>
+        
+        <h4>Filtro de combustible</h4>
+        <p>Retiene impurezas del combustible antes de que lleguen al motor. Es crucial para el funcionamiento de los inyectores y la bomba de combustible.</p>
+        
+        <h4>Filtro de cabina</h4>
+        <p>Mejora la calidad del aire dentro del vehículo, filtrando polen, polvo y gases nocivos del sistema de ventilación.</p>
+        
+        <h3>Señales de que necesitas cambiar los filtros</h3>
+        <ul>
+          <li>Reducción en el rendimiento del combustible</li>
+          <li>Pérdida de potencia del motor</li>
+          <li>Olores extraños en la cabina</li>
+          <li>Ruidos inusuales del motor</li>
+          <li>Aire acondicionado menos eficiente</li>
+        </ul>
+        
+        <h3>Calidad marca la diferencia</h3>
+        <p>En MC Mendoza manejamos filtros de las mejores marcas que cumplen o superan las especificaciones OEM. Invertir en filtros de calidad es invertir en la longevidad de tu vehículo.</p>
+        
+        <h3>Programa de mantenimiento</h3>
+        <p>Establece un programa regular de cambio de filtros basado en el kilometraje y condiciones de uso. Nuestros técnicos pueden ayudarte a crear un plan personalizado para tu vehículo.</p>
+      `
+    }
+  ]
 
   const openPost = (post: typeof blogPosts[0]) => {
     setSelectedPost(post)
@@ -138,11 +140,10 @@ export function Blog() {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Blog <span className="text-mc-red">Automotriz</span>
+            {t('blog.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Mantente informado con nuestros artículos especializados. 
-            Tips, consejos y guías para mantener tu vehículo en perfectas condiciones.
+            {t('blog.subtitle')}
           </p>
         </div>
 
@@ -196,7 +197,7 @@ export function Blog() {
                   variant="ghost"
                   className="w-full justify-between group/btn hover:bg-mc-red/10 hover:text-mc-red transition-colors"
                 >
-                  <span>Leer más ({post.readTime})</span>
+                  <span>{t('blog.readmore')} ({post.readTime})</span>
                   <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                 </Button>
               </CardContent>

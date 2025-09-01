@@ -9,9 +9,11 @@ import {
   Car,
   MessageCircle 
 } from "lucide-react"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 export function Location() {
-  const address = "Av. Francisco I. Madero 564, Chapala, Jalisco, México"
+  const { t } = useLanguage()
+  const address = t('location.address')
   const phoneNumber = "+52 322 123 4567"
   const email = "contacto@mcmendoza.com"
   const whatsappNumber = "523221234567"

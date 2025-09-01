@@ -35,6 +35,16 @@ const translations = {
     'services.quote.title': '¿Necesitas una cotización personalizada?',
     'services.quote.subtitle': 'Nuestros expertos te ayudarán a encontrar exactamente lo que necesitas',
     'services.quote.button': 'Solicitar Cotización',
+    'services.hoses.title': 'Mangueras Automotrices',
+    'services.hoses.description': 'Amplio catálogo de mangueras para sistemas de refrigeración, frenos, dirección hidráulica y combustible. Todas las marcas y modelos.',
+    'services.oils.title': 'Aceites y Lubricantes',
+    'services.oils.description': 'Aceites de motor premium, lubricantes especializados y fluidos para transmisión. Marcas reconocidas mundialmente.',
+    'services.connections.title': 'Conexiones y Accesorios',
+    'services.connections.description': 'Conexiones, abrazaderas, válvulas y accesorios de alta calidad para sistemas automotrices completos.',
+    'services.filters.title': 'Filtros Automotrices',
+    'services.filters.description': 'Filtros de aceite, aire, combustible y cabina. Protección máxima para tu motor y sistemas vehiculares.',
+    'services.advice.title': 'Asesoría Técnica',
+    'services.advice.description': 'Asesoría especializada para la selección correcta de refacciones. Experiencia de más de 15 años en el sector.',
     
     // Videos
     'videos.title': 'Nuestros Videos',
@@ -44,6 +54,12 @@ const translations = {
     // Gallery
     'gallery.title': 'Galería',
     'gallery.subtitle': 'Conoce nuestras instalaciones y productos de primera calidad',
+    'gallery.img1.title': 'Taller Profesional',
+    'gallery.img1.description': 'Amplio surtido en tornilleria.',
+    'gallery.img2.title': 'La morocha la mascota de MC Mendoza',
+    'gallery.img2.description': 'la guardia',
+    'gallery.img3.title': 'La mojarra la moto chingona',
+    'gallery.img3.description': 'para reparto de las piezas',
     
     // Testimonials
     'testimonials.title': 'Testimonios',
@@ -54,6 +70,15 @@ const translations = {
     'blog.subtitle': 'Artículos y consejos útiles para el mantenimiento de tu vehículo',
     'blog.readmore': 'Leer más',
     'blog.back': 'Volver al Blog',
+    'blog.author': 'Autor',
+    'blog.date': 'Fecha',
+    'blog.readtime': 'min de lectura',
+    'blog.post1.title': 'Cómo elegir el aceite correcto para tu motor',
+    'blog.post1.excerpt': 'Descubre los factores clave que debes considerar al seleccionar el aceite ideal para mantener tu motor en perfectas condiciones.',
+    'blog.post2.title': 'Mantenimiento preventivo de mangueras automotrices',
+    'blog.post2.excerpt': 'Aprende a identificar cuándo es momento de cambiar las mangueras de tu vehículo y evita costosas averías.',
+    'blog.post3.title': 'Sistemas de filtración: Tu motor te lo agradecerá',
+    'blog.post3.excerpt': 'Conoce la importancia de mantener un sistema de filtración eficiente y cómo puede extender la vida de tu motor.',
     
     // Location
     'location.title': 'Nuestra Ubicación',
@@ -64,7 +89,34 @@ const translations = {
     'location.directions': 'Cómo Llegar',
     'location.phone': 'Teléfono',
     'location.email': 'Email',
-    'location.whatsapp': 'WhatsApp'
+    'location.whatsapp': 'WhatsApp',
+    'location.monday': 'Lunes - Viernes',
+    'location.saturday': 'Sábados',
+    'location.sunday': 'Domingos',
+    'location.closed': 'Cerrado',
+    
+    // Footer
+    'footer.company': 'Empresa',
+    'footer.products': 'Productos',
+    'footer.support': 'Soporte',
+    'footer.contact': 'Contacto',
+    'footer.about': 'Acerca de Nosotros',
+    'footer.privacy': 'Política de Privacidad',
+    'footer.terms': 'Términos de Servicio',
+    'footer.hoses': 'Mangueras',
+    'footer.oils': 'Aceites',
+    'footer.filters': 'Filtros',
+    'footer.connections': 'Conexiones',
+    'footer.help': 'Centro de Ayuda',
+    'footer.faq': 'Preguntas Frecuentes',
+    'footer.warranty': 'Garantía',
+    'footer.shipping': 'Envíos',
+    'footer.rights': 'Todos los derechos reservados.',
+    
+    // Floating Contact
+    'contact.whatsapp': 'WhatsApp',
+    'contact.phone': 'Teléfono',
+    'contact.email': 'Email'
   },
   en: {
     // Navigation
@@ -92,6 +144,16 @@ const translations = {
     'services.quote.title': 'Need a personalized quote?',
     'services.quote.subtitle': 'Our experts will help you find exactly what you need',
     'services.quote.button': 'Request Quote',
+    'services.hoses.title': 'Automotive Hoses',
+    'services.hoses.description': 'Wide catalog of hoses for cooling, brake, power steering and fuel systems. All brands and models.',
+    'services.oils.title': 'Oils and Lubricants',
+    'services.oils.description': 'Premium engine oils, specialized lubricants and transmission fluids. Globally recognized brands.',
+    'services.connections.title': 'Connections and Accessories',
+    'services.connections.description': 'Connections, clamps, valves and high-quality accessories for complete automotive systems.',
+    'services.filters.title': 'Automotive Filters',
+    'services.filters.description': 'Oil, air, fuel and cabin filters. Maximum protection for your engine and vehicle systems.',
+    'services.advice.title': 'Technical Advisory',
+    'services.advice.description': 'Specialized advice for the correct selection of spare parts. Over 15 years of experience in the sector.',
     
     // Videos
     'videos.title': 'Our Videos',
@@ -101,6 +163,12 @@ const translations = {
     // Gallery
     'gallery.title': 'Gallery',
     'gallery.subtitle': 'Discover our facilities and premium quality products',
+    'gallery.img1.title': 'Professional Workshop',
+    'gallery.img1.description': 'Wide assortment of hardware.',
+    'gallery.img2.title': 'La Morocha, MC Mendoza\'s mascot',
+    'gallery.img2.description': 'the guard',
+    'gallery.img3.title': 'La Mojarra, the awesome bike',
+    'gallery.img3.description': 'for parts delivery',
     
     // Testimonials
     'testimonials.title': 'Testimonials',
@@ -111,6 +179,15 @@ const translations = {
     'blog.subtitle': 'Articles and useful tips for your vehicle maintenance',
     'blog.readmore': 'Read more',
     'blog.back': 'Back to Blog',
+    'blog.author': 'Author',
+    'blog.date': 'Date',
+    'blog.readtime': 'min read',
+    'blog.post1.title': 'How to choose the right oil for your engine',
+    'blog.post1.excerpt': 'Discover the key factors you should consider when selecting the ideal oil to keep your engine in perfect condition.',
+    'blog.post2.title': 'Preventive maintenance of automotive hoses',
+    'blog.post2.excerpt': 'Learn to identify when it\'s time to change your vehicle\'s hoses and avoid costly breakdowns.',
+    'blog.post3.title': 'Filtration systems: Your engine will thank you',
+    'blog.post3.excerpt': 'Learn the importance of maintaining an efficient filtration system and how it can extend your engine\'s life.',
     
     // Location
     'location.title': 'Our Location',
@@ -121,7 +198,34 @@ const translations = {
     'location.directions': 'Get Directions',
     'location.phone': 'Phone',
     'location.email': 'Email',
-    'location.whatsapp': 'WhatsApp'
+    'location.whatsapp': 'WhatsApp',
+    'location.monday': 'Monday - Friday',
+    'location.saturday': 'Saturday',
+    'location.sunday': 'Sunday',
+    'location.closed': 'Closed',
+    
+    // Footer
+    'footer.company': 'Company',
+    'footer.products': 'Products',
+    'footer.support': 'Support',
+    'footer.contact': 'Contact',
+    'footer.about': 'About Us',
+    'footer.privacy': 'Privacy Policy',
+    'footer.terms': 'Terms of Service',
+    'footer.hoses': 'Hoses',
+    'footer.oils': 'Oils',
+    'footer.filters': 'Filters',
+    'footer.connections': 'Connections',
+    'footer.help': 'Help Center',
+    'footer.faq': 'FAQ',
+    'footer.warranty': 'Warranty',
+    'footer.shipping': 'Shipping',
+    'footer.rights': 'All rights reserved.',
+    
+    // Floating Contact
+    'contact.whatsapp': 'WhatsApp',
+    'contact.phone': 'Phone',
+    'contact.email': 'Email'
   }
 }
 

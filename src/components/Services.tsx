@@ -9,42 +9,43 @@ import {
   Clock,
   ArrowRight 
 } from "lucide-react"
-
-const services = [
-  {
-    icon: Settings,
-    title: "Mangueras Automotrices",
-    description: "Amplio catálogo de mangueras para sistemas de refrigeración, frenos, dirección hidráulica y combustible. Todas las marcas y modelos.",
-    features: ["Refrigeración", "Frenos", "Dirección", "Combustible"]
-  },
-  {
-    icon: Droplets,
-    title: "Aceites y Lubricantes",
-    description: "Aceites de motor premium, lubricantes especializados y fluidos para transmisión. Marcas reconocidas mundialmente.",
-    features: ["Aceites Motor", "Transmisión", "Hidráulicos", "Diferenciales"]
-  },
-  {
-    icon: Wrench,
-    title: "Conexiones y Accesorios",
-    description: "Conexiones, abrazaderas, válvulas y accesorios de alta calidad para sistemas automotrices completos.",
-    features: ["Abrazaderas", "Válvulas", "Conectores", "Adaptadores"]
-  },
-  {
-    icon: Shield,
-    title: "Filtros Automotrices",
-    description: "Filtros de aceite, aire, combustible y cabina. Protección máxima para tu motor y sistemas vehiculares.",
-    features: ["Aceite", "Aire", "Combustible", "Cabina"]
-  },
-  
-  {
-    icon: Clock,
-    title: "Asesoría Técnica",
-    description: "Asesoría especializada para la selección correcta de refacciones. Experiencia de más de 15 años en el sector.",
-    features: ["Consultoría", "Diagnóstico", "Recomendaciones", "Soporte"]
-  }
-]
+import { useLanguage } from "@/contexts/LanguageContext"
 
 export function Services() {
+  const { t } = useLanguage()
+  
+  const services = [
+    {
+      icon: Settings,
+      title: t('services.hoses.title'),
+      description: t('services.hoses.description'),
+      features: ["Refrigeración", "Frenos", "Dirección", "Combustible"]
+    },
+    {
+      icon: Droplets,
+      title: t('services.oils.title'),
+      description: t('services.oils.description'),
+      features: ["Aceites Motor", "Transmisión", "Hidráulicos", "Diferenciales"]
+    },
+    {
+      icon: Wrench,
+      title: t('services.connections.title'),
+      description: t('services.connections.description'),
+      features: ["Abrazaderas", "Válvulas", "Conectores", "Adaptadores"]
+    },
+    {
+      icon: Shield,
+      title: t('services.filters.title'),
+      description: t('services.filters.description'),
+      features: ["Aceite", "Aire", "Combustible", "Cabina"]
+    },
+    {
+      icon: Clock,
+      title: t('services.advice.title'),
+      description: t('services.advice.description'),
+      features: ["Consultoría", "Diagnóstico", "Recomendaciones", "Soporte"]
+    }
+  ]
   const handleQuoteRequest = () => {
     window.open("https://wa.me/523221234567?text=Hola%2C%20me%20interesa%20solicitar%20una%20cotizaci%C3%B3n", "_blank")
   }
@@ -55,11 +56,10 @@ export function Services() {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Nuestros <span className="text-mc-red">Servicios</span>
+            {t('services.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Ofrecemos una amplia gama de productos y servicios automotrices con la más alta calidad 
-            y respaldados por años de experiencia en el sector.
+            {t('services.subtitle')}
           </p>
         </div>
 
@@ -102,17 +102,17 @@ export function Services() {
         {/* CTA Section */}
         <div className="text-center bg-gradient-primary rounded-3xl p-8 md:p-12 text-white animate-bounce-in">
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
-            ¿Necesitas una cotización personalizada?
+            {t('services.quote.title')}
           </h3>
           <p className="text-lg mb-6 text-white/90">
-            Nuestros expertos te ayudarán a encontrar exactamente lo que necesitas
+            {t('services.quote.subtitle')}
           </p>
           <Button 
             size="lg"
             onClick={handleQuoteRequest}
             className="bg-white text-mc-red hover:bg-white/90 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 group shadow-float"
           >
-            Solicitar Cotización
+            {t('services.quote.button')}
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>

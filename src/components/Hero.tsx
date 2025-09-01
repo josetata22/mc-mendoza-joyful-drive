@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Wrench, Droplets, Shield } from "lucide-react"
+import { useLanguage } from "@/contexts/LanguageContext"
 import heroBg from "@/assets/hero-bg.jpg"
 
 export function Hero() {
+  const { t } = useLanguage()
+  
   const scrollToContact = () => {
     const element = document.getElementById("ubicacion")
     if (element) {
@@ -45,14 +48,14 @@ export function Hero() {
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-slide-up">
-            <span className="block">MC</span>
-            <span className="block text-mc-red-light">Mendoza</span>
+            <span className="block">{t('hero.title').split(' ')[0]}</span>
+            <span className="block text-mc-red-light">{t('hero.title').split(' ')[1]}</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto animate-slide-up" style={{ animationDelay: "0.3s" }}>
-            El mejor servicio de la rivera de chapala.
+            {t('hero.subtitle')}
             <span className="block mt-2 text-mc-red-light font-semibold">
-              Calidad, confianza y excelencia en cada pieza.
+              {t('hero.quality')}
             </span>
           </p>
 
@@ -62,7 +65,7 @@ export function Hero() {
               onClick={scrollToContact}
               className="bg-mc-red hover:bg-mc-red-dark text-white px-8 py-4 rounded-full text-lg font-semibold shadow-float transition-all duration-300 hover:scale-105 group"
             >
-              Contáctanos Ya
+              {t('hero.contact')}
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             
@@ -72,7 +75,7 @@ export function Hero() {
               onClick={() => document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" })}
               className="border-2 border-white text-white bg-white/10 backdrop-blur-sm hover:bg-white hover:text-mc-black px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105"
             >
-              Ver Servicios
+              {t('hero.services')}
             </Button>
           </div>
 
@@ -80,15 +83,15 @@ export function Hero() {
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in" style={{ animationDelay: "0.9s" }}>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">15+</div>
-              <div className="text-white/80">Años de Experiencia</div>
+              <div className="text-white/80">{t('hero.years')}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">1000+</div>
-              <div className="text-white/80">Clientes Satisfechos</div>
+              <div className="text-white/80">{t('hero.clients')}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">24/7</div>
-              <div className="text-white/80">Soporte Disponible</div>
+              <div className="text-white/80">{t('hero.support')}</div>
             </div>
           </div>
         </div>
