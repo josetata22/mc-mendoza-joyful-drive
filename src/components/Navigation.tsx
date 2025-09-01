@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/ThemeToggle"
 import { LanguageToggle } from "@/components/LanguageToggle"
+import { useLanguage } from "@/contexts/LanguageContext"
 import { Menu, X } from "lucide-react"
 
 interface NavigationProps {
@@ -11,6 +12,7 @@ interface NavigationProps {
 export function Navigation({ logo }: NavigationProps) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,42 +57,49 @@ export function Navigation({ logo }: NavigationProps) {
               onClick={() => scrollToSection("inicio")}
               className="font-medium hover:text-mc-red transition-colors"
             >
-              Inicio
+              {t('nav.inicio')}
             </Button>
             <Button
               variant="ghost"
               onClick={() => scrollToSection("servicios")}
               className="font-medium hover:text-mc-red transition-colors"
             >
-              Servicios
+              {t('nav.servicios')}
             </Button>
             <Button
               variant="ghost"
               onClick={() => scrollToSection("galeria")}
               className="font-medium hover:text-mc-red transition-colors"
             >
-              Galería
+              {t('nav.galeria')}
+            </Button>
+            <Button
+              variant="ghost"
+              onClick={() => scrollToSection("videos")}
+              className="font-medium hover:text-mc-red transition-colors"
+            >
+              {t('nav.videos')}
             </Button>
             <Button
               variant="ghost"
               onClick={() => scrollToSection("testimonios")}
               className="font-medium hover:text-mc-red transition-colors"
             >
-              Testimonios
+              {t('nav.testimonios')}
             </Button>
             <Button
               variant="ghost"
               onClick={() => scrollToSection("blog")}
               className="font-medium hover:text-mc-red transition-colors"
             >
-              Blog
+              {t('nav.blog')}
             </Button>
             <Button
               variant="ghost"
               onClick={() => scrollToSection("ubicacion")}
               className="font-medium hover:text-mc-red transition-colors"
             >
-              Ubicación
+              {t('nav.ubicacion')}
             </Button>
           </div>
 
@@ -120,42 +129,49 @@ export function Navigation({ logo }: NavigationProps) {
                 onClick={() => scrollToSection("inicio")}
                 className="justify-start font-medium hover:text-mc-red transition-colors"
               >
-                Inicio
+                {t('nav.inicio')}
               </Button>
               <Button
                 variant="ghost"
                 onClick={() => scrollToSection("servicios")}
                 className="justify-start font-medium hover:text-mc-red transition-colors"
               >
-                Servicios
+                {t('nav.servicios')}
               </Button>
               <Button
                 variant="ghost"
                 onClick={() => scrollToSection("galeria")}
                 className="justify-start font-medium hover:text-mc-red transition-colors"
               >
-                Galería
+                {t('nav.galeria')}
+              </Button>
+              <Button
+                variant="ghost"
+                onClick={() => scrollToSection("videos")}
+                className="justify-start font-medium hover:text-mc-red transition-colors"
+              >
+                {t('nav.videos')}
               </Button>
               <Button
                 variant="ghost"
                 onClick={() => scrollToSection("testimonios")}
                 className="justify-start font-medium hover:text-mc-red transition-colors"
               >
-                Testimonios
+                {t('nav.testimonios')}
               </Button>
               <Button
                 variant="ghost"
                 onClick={() => scrollToSection("blog")}
                 className="justify-start font-medium hover:text-mc-red transition-colors"
               >
-                Blog
+                {t('nav.blog')}
               </Button>
               <Button
                 variant="ghost"
                 onClick={() => scrollToSection("ubicacion")}
                 className="justify-start font-medium hover:text-mc-red transition-colors"
               >
-                Ubicación
+                {t('nav.ubicacion')}
               </Button>
             </div>
           </div>
